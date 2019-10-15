@@ -16,7 +16,7 @@ local function ends_with(str, ending)
     return ending == "" or str:sub(-#ending) == ending
 end
 
-local iterFn, dirObj = hs.fs.dir(hs.fs.pathToAbsolute("./modules"))
+local iterFn, dirObj = hs.fs.dir(hs.fs.pathToAbsolute("~/.hammerspoon/modules"))
 if iterFn then
     for file in iterFn, dirObj do
         if ends_with(file, '.lua') then
