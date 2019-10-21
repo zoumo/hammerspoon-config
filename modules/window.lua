@@ -1,3 +1,9 @@
+function mouseFollowsFocusedWindow()
+    local cwin = hs.window.focusedWindow()
+    local f = cwin:frame()
+    hs.mouse.setAbsolutePosition({x = (f.x + (f.w / 2)), y = (f.y + (f.h / 2))})
+end
+
 if spoon.WinWin then
     spoon.ModalMgr:new("resizeM")
     local cmodal = spoon.ModalMgr.modal_list["resizeM"]
@@ -59,6 +65,7 @@ if spoon.WinWin then
     cmodal:bind(
         '', 'space', 'Move to Next Monitor', function()
             spoon.WinWin:moveToScreen("next")
+            mouseFollowsFocusedWindow()
         end, deactivate
     )
 
