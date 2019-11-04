@@ -27,7 +27,6 @@ hslock_keys = hslock_keys or {{"cmd", "ctrl"}, "L"}
 if #hslock_keys > 1 then
     hs.hotkey.bind(
         hslock_keys[1], hslock_keys[2], "Lock Screen", function()
-            hs.reload()
             hs.caffeinate.lockScreen()
         end
     )
