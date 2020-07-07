@@ -48,5 +48,5 @@ walkAndLoad(
 spoon.ModalMgr.supervisor:enter()
 
 -- start volume scroll
-spoon.VolumeScroll:init()
-spoon.VolumeScroll:start()
+-- spoon.VolumeScroll:init()
+-- spoon.VolumeScroll:start()
